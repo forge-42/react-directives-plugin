@@ -1,6 +1,6 @@
 {
-	"name": "react-directives",
-	"version": "1.0.0",
+	"name": "vite-plugin-react-directives",
+	"version": "0.0.0",
 	"description": "Minimal open-source stack to help you ship an open-source package in TS",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
@@ -35,15 +35,15 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/forge-42/react-directives.git"
+		"url": "git+https://github.com/forge-42/vite-plugin-react-directives.git"
 	},
 	"bugs": {
-		"url": "https://github.com/forge-42/react-directives/issues"
+		"url": "https://github.com/forge-42/vite-plugin-react-directives/issues"
 	},
 	"files": [
 		"dist"
 	],
-	"homepage": "https://github.com/forge-42/react-directives#readme",
+	"homepage": "https://github.com/forge-42/vite-plugin-react-directives#readme",
 	"publishConfig": {
 		"provenance": true
 	},

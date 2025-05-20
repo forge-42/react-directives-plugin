@@ -1,6 +1,6 @@
 
 import { defineConfig } from "vite";
-import { reactDirectives } from "react-directives";
+import { reactDirectives } from "vite-plugin-react-directives";
 
 export default defineConfig({
   plugins: [

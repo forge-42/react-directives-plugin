@@ -1,4 +1,4 @@
-# react-directives
+# vite-plugin-react-directives
 
 ## 1.0.0
 
@@ -24,4 +24,4 @@
 ### Minor Changes
 
 - f2fbd38: Added changesets to the project
-- e051f2f: We have migrated the react-directives to use pnpm workspaces with changesets instead of the old npm approach with npm workspaces.
+- e051f2f: We have migrated the vite-plugin-react-directives to use pnpm workspaces with changesets instead of the old npm approach with npm workspaces.

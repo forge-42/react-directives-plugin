@@ -14,7 +14,7 @@
     "@react-router/serve": "^7.5.0",
     "isbot": "^5.1.26",
     "react": "^19.1.0",
-    "react-directives": "workspace:*",
+    "vite-plugin-react-directives": "workspace:*",
     "react-dom": "^19.1.0",
     "react-router": "^7.5.0",
     "vite-plugin-inspect": "^11.1.0"
