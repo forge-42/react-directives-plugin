@@ -4,6 +4,12 @@
 
 ### Major Changes
 
+- 365b89d: Initial release of react-directives-plugin
+
+## 1.0.0
+
+### Major Changes
+
 - 5c9ec3c: The inital release of react-directives-plugin
 
 ## 1.0.0
