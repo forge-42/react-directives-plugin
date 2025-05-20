@@ -1,6 +1,7 @@
 import type { types as Babel } from "@babel/core"
 import type { ParseResult } from "@babel/parser"
 import picomatch from "picomatch"
+import type { ReactDirectivesPluginOptions } from "."
 import { gen, parse, t } from "./babel"
 
 const transform = (ast: ParseResult<Babel.File>, directivesToAdd: string[]) => {
@@ -37,32 +38,18 @@ export function addReactDirectives(code: string, directivesToAdd: string[], id: 
 	}
 }
 
-export const transformCode = (
-	code: string,
-	id: string,
-	{
-		useClient,
-		useServer,
-		useStrict,
-	}: {
-		useClient: string[]
-		useServer: string[]
-		useStrict: string[]
+export const transformCode = (code: string, id: string, directives?: ReactDirectivesPluginOptions) => {
+	if (!directives) {
+		return { code }
 	}
-) => {
 	const directivesToAdd = []
-	const clientMatcher = picomatch(useClient)
-	const serverMatcher = picomatch(useServer)
-	const strictMatcher = picomatch(useStrict)
-	if (clientMatcher(id)) {
-		directivesToAdd.push("use client")
+	for (const [key, value] of Object.entries(directives)) {
+		const matcher = picomatch(value)
+		if (matcher(id)) {
+			directivesToAdd.push(key)
+		}
 	}
-	if (serverMatcher(id)) {
-		directivesToAdd.push("use server")
-	}
-	if (strictMatcher(id)) {
-		directivesToAdd.push("use strict")
-	}
+
 	if (!directivesToAdd.length) {
 		return { code }
 	}

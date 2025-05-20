@@ -49,9 +49,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: ["**/*.js"],
-			useServer: [],
-			useStrict: [],
+			"use client": ["**/*.js"],
+			"use server": [],
+			"use strict": [],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -64,9 +64,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: ["*/.ts", "**/*.js"],
-			useServer: [],
-			useStrict: [],
+			"use client": ["*/.ts", "**/*.js"],
+			"use server": [],
+			"use strict": [],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -79,9 +79,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: ["*/.ts", "**/*.ts"],
-			useStrict: [],
+			"use client": [],
+			"use server": ["*/.ts", "**/*.ts"],
+			"use strict": [],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -94,9 +94,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: ["**/*.js"],
-			useStrict: [],
+			"use client": [],
+			"use server": ["**/*.js"],
+			"use strict": [],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -110,9 +110,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.server.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: ["**/*.server.js"],
-			useStrict: [],
+			"use client": [],
+			"use server": ["**/*.server.js"],
+			"use strict": [],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -125,9 +125,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: ["*/.ts", "**/*.js"],
-			useStrict: [],
+			"use client": [],
+			"use server": ["*/.ts", "**/*.js"],
+			"use strict": [],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -140,9 +140,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: ["*/.ts", "**/*.ts"],
-			useStrict: [],
+			"use client": [],
+			"use server": ["*/.ts", "**/*.ts"],
+			"use strict": [],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -156,9 +156,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: [],
-			useStrict: ["*/.ts", "**/*.ts"],
+			"use client": [],
+			"use server": [],
+			"use strict": ["*/.ts", "**/*.ts"],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -171,9 +171,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: [],
-			useStrict: ["**/*.js"],
+			"use client": [],
+			"use server": [],
+			"use strict": ["**/*.js"],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
@@ -186,12 +186,30 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: [],
-			useStrict: ["*/.ts", "**/*.js"],
+			"use client": [],
+			"use server": [],
+			"use strict": ["*/.ts", "**/*.js"],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
+			"use strict";
+			const a = 1;
+			`)
+		)
+	})
+
+	it("should add random directive with multiple matchers", () => {
+		const code = "const a = 1;"
+		const id = "C://path/to/file/test.js"
+		const result = transformCode(code, id, {
+			"use client": [],
+			"use server": [],
+			"use strict": ["*/.ts", "**/*.js"],
+			"use potato": ["*/.ts", "**/*.js"],
+		})
+		expect(removeWhitespace(result.code)).toMatch(
+			removeWhitespace(`
+			"use potato";
 			"use strict";
 			const a = 1;
 			`)
@@ -201,9 +219,9 @@ describe("transformCode", () => {
 		const code = "const a = 1;"
 		const id = "C://path/to/file/test.js"
 		const result = transformCode(code, id, {
-			useClient: [],
-			useServer: [],
-			useStrict: ["*/.ts", "**/*.ts"],
+			"use client": [],
+			"use server": [],
+			"use strict": ["*/.ts", "**/*.ts"],
 		})
 		expect(removeWhitespace(result.code)).toMatch(
 			removeWhitespace(`
