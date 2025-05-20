@@ -1,8 +1,7 @@
 {
 	"name": "react-directives-plugin",
 	"version": "1.0.0",
-	"description": "Minimal open-source stack to help you ship an open-source package in TS",
-	"main": "./dist/index.cjs",
+	"description": "Vite plugin that allows you to add react directives to files behind the scenes",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
@@ -13,11 +12,6 @@
 				"types": "./dist/index.d.ts",
 				"import": "./dist/index.js",
 				"default": "./dist/index.js"
-			},
-			"require": {
-				"types": "./dist/index.d.cts",
-				"import": "./dist/index.cjs",
-				"require": "./dist/index.cjs"
 			}
 		}
 	},
