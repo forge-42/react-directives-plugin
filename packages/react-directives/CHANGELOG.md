@@ -4,6 +4,12 @@
 
 ### Major Changes
 
+- 5c9ec3c: The inital release of vite-plugin-react-directives
+
+## 1.0.0
+
+### Major Changes
+
 - 7776354: Initial release of react-directives package
 
 ## 1.1.2
