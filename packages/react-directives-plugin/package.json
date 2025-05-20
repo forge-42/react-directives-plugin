@@ -34,9 +34,7 @@
 	"bugs": {
 		"url": "https://github.com/forge-42/react-directives-plugin/issues"
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"homepage": "https://github.com/forge-42/react-directives-plugin#readme",
 	"publishConfig": {
 		"provenance": true
