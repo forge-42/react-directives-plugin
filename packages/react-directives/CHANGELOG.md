@@ -1,10 +1,10 @@
-# vite-plugin-react-directives
+# react-directives-plugin
 
 ## 1.0.0
 
 ### Major Changes
 
-- 5c9ec3c: The inital release of vite-plugin-react-directives
+- 5c9ec3c: The inital release of react-directives-plugin
 
 ## 1.0.0
 
@@ -30,4 +30,4 @@
 ### Minor Changes
 
 - f2fbd38: Added changesets to the project
-- e051f2f: We have migrated the vite-plugin-react-directives to use pnpm workspaces with changesets instead of the old npm approach with npm workspaces.
+- e051f2f: We have migrated the react-directives-plugin to use pnpm workspaces with changesets instead of the old npm approach with npm workspaces.

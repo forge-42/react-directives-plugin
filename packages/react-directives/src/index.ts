@@ -10,7 +10,7 @@ export const reactDirectives = (props?: {
 }): any => {
 	const { "use client": useClient = [], "use server": useServer = [], "use strict": useStrict = [] } = props || {}
 	return {
-		name: "vite-plugin-react-directives",
+		name: "react-directives-plugin",
 		enforce: "pre",
 		transform(code, id) {
 			return transformCode(code, id, {
