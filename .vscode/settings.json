@@ -30,5 +30,8 @@
 	},
 	"eslint.enable": false,
 	"eslint.format.enable": false,
-	"prettier.enable": false
+	"prettier.enable": false,
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }

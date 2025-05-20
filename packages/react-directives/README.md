@@ -25,21 +25,13 @@ import { reactDirectives } from "react-directives";
 export default defineConfig({
   plugins: [
     reactDirectives({
-      // Adds a "use server" directive to all files that end with .server.ts
+			// Adds a "use server" directive to all files that end with .server.ts
       "use server": ["**/*.server.ts"],
-      // Adds a "use client" directive to all files that end with .client.ts
+			// Adds a "use client" directive to all files that end with .client.ts
       "use client": ["**/*.client.ts"],
-      // Adds a "use strict" directive to all files that end with .strict.ts
+			// Adds a "use strict" directive to all files that end with .strict.ts
       "use strict": ["**/*.strict.ts"],
     })
   ],
 });
 ```
-
-### Config options
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `use server` | `string[]` | An array of glob patterns to match files to add the `"use server"` directive. |
-| `use client` | `string[]` | An array of glob patterns to match files to add the `"use client"` directive. |
-| `use strict` | `string[]` | An array of glob patterns to match files to add the `"use strict"` directive. |

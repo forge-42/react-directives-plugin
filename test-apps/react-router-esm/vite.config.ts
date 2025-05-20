@@ -1,9 +1,13 @@
-// @ts-ignore
-import { reactRouter } from "@react-router/dev/vite";
+
 import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
-import { reactRouterDevTools } from "react-router-devtools";
+import { reactDirectives } from "react-directives";
 
 export default defineConfig({
-  plugins: [ reactRouterDevTools(),reactRouter(), tsconfigPaths()],
+  plugins: [
+    reactDirectives({
+      "use server": ["**/*.server.ts"],
+      "use client": ["**/*.client.ts"],
+      "use strict": ["**/*.strict.ts"],
+    })
+  ],
 });

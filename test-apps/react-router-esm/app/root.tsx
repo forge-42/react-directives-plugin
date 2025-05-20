@@ -5,6 +5,15 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { something } from "./transform.server";
+import { somethingElse } from "./transform.client";
+import { somethingElseThird } from "./transform.strict";
+
+export const loader = async () => {
+  somethingElse();
+  somethingElseThird  ();
+  return something()
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
