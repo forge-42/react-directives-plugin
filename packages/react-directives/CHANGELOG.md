@@ -1,5 +1,11 @@
 # react-directives
 
+## 1.0.0
+
+### Major Changes
+
+- 7776354: Initial release of react-directives package
+
 ## 1.1.2
 
 ### Patch Changes
