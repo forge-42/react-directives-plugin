@@ -1,5 +1,11 @@
 # react-directives-plugin
 
+## 1.1.0
+
+### Minor Changes
+
+- 56bf289: Added support for custom directives like "use something"
+
 ## 1.0.0
 
 ### Major Changes

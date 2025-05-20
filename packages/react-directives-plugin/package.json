@@ -1,6 +1,6 @@
 {
 	"name": "react-directives-plugin",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Vite plugin that allows you to add react directives to files behind the scenes",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -34,7 +34,9 @@
 	"bugs": {
 		"url": "https://github.com/forge-42/react-directives-plugin/issues"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"homepage": "https://github.com/forge-42/react-directives-plugin#readme",
 	"publishConfig": {
 		"provenance": true
