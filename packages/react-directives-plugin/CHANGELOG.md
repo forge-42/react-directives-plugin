@@ -1,5 +1,11 @@
 # react-directives-plugin
 
+## 1.1.1
+
+### Patch Changes
+
+- dfba6a2: update docs
+
 ## 1.1.0
 
 ### Minor Changes
