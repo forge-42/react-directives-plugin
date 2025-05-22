@@ -25,8 +25,8 @@ import { reactDirectives } from "react-directives-plugin";
 export default defineConfig({
   plugins: [
     reactDirectives({
-      // Adds a "use server" directive to all files that end with .server.ts
-      "use server": ["**/*.server.ts"],
+      // Adds a "use server" directive to all files that end with .action.ts
+      "use server": ["**/*.action.ts"],
       // Adds a "use client" directive to all files that end with .client.ts
       "use client": ["**/*.client.ts"],
       // Adds a "use strict" directive to all files that end with .strict.ts
